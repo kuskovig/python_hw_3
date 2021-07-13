@@ -10,11 +10,12 @@ def test_can_create_square(valid_square):
 
 
 def test_calculate_square_area(valid_square):
-    assert valid_square.area == valid_square.first_side ** 2, "Area of square is incorrect"
+    assert valid_square.area == valid_square.first_side * valid_square.second_side, "Area of square is incorrect"
 
 
 def test_calculate_square_perimeter(valid_square):
-    assert valid_square.perimeter == valid_square.first_side * 4, "Perimeter of square is incorrect"
+    assert valid_square.perimeter == 2 * (valid_square.first_side + valid_square.second_side),\
+        "Perimeter of square is incorrect"
 
 
 def test_square_can_add_figures(valid_square, valid_triangle):
